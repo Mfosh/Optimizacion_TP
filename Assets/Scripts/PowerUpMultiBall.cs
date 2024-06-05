@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerUp : MonoBehaviour
+public class PowerUpMultiBall : MonoBehaviour
 {
     [SerializeField] float _fallSpeed;
     [SerializeField] float _rotationSpeed;
