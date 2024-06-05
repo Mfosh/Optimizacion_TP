@@ -7,9 +7,16 @@ public class GameManager : MonoBehaviour
     BallPool ballPool;
     List<GameObject> ActiveBalls;
     [SerializeField] List<GameObject> ActiveBlocks;
+    public static GameManager instance;
 
-
-void Start()
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+    }
+    void Start()
     {
         ballPool = GetComponent<BallPool>();
         ActiveBalls = new List<GameObject>();
@@ -28,7 +35,7 @@ void Start()
         
     }
 
-    void MultiBall()
+    public void MultiBall()
     {
         int currentBalls = ActiveBalls.Count;
         for (int i = 0; i < currentBalls; i++)
