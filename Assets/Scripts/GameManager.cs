@@ -15,11 +15,13 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+
+        ballPool = GetComponent<BallPool>();
+        ActiveBalls = new List<GameObject>();
     }
     void Start()
     {
-        ballPool = GetComponent<BallPool>();
-        ActiveBalls = new List<GameObject>();
+
 
         ActiveBalls.Add(ballPool.GetBall());
     }

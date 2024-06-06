@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ball : MonoBehaviour
+public class Ball : MonoBehaviour, IUpdateable      
 {
     [SerializeField] float _movementSpeed;
     float angle;
     [SerializeField] float RotationSpeed;
     Vector3 dir;
     float BallRadius;
+    Block blocks;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,7 @@ public class Ball : MonoBehaviour
     {
        // Rotate();
         
-        transform.position += dir * _movementSpeed * Time.deltaTime;
+
     }
 
     void Rotate()
@@ -48,8 +49,11 @@ public class Ball : MonoBehaviour
         //BlocksHit
         if (collision.gameObject.GetComponent<Block>())
         {
+            if(blocks == null)
+            {
+                blocks = collision.gameObject.GetComponent<Block>();
+            }
             BlockCollision(collision.gameObject);
-            //EVNETO DESTRUTCCION TOTAL
             collision.gameObject.GetComponent<Block>().OnHit();
          
         }
@@ -78,36 +82,38 @@ public class Ball : MonoBehaviour
         float BlockTop = Block.transform.position.y + blockCollider.bounds.size.y / 2;
         float BlockBot = Block.transform.position.y - blockCollider.bounds.size.y / 2;
 
-        Debug.Log(blockCollider.bounds.size.y);
-        Debug.Log(BlockLeft);
-        Debug.Log(BlockRight);
-        Debug.Log(transform.position.x - BallRadius);
         
         if (transform.position.y + BallRadius <= Block.transform.position.y && transform.position.x > BlockLeft && transform.position.x < BlockRight)
         {
             dir.y = -1;
-            Debug.Log("HitBot");
+       
         }
        
         if (transform.position.y - BallRadius >= Block.transform.position.y && transform.position.x > BlockLeft && transform.position.x < BlockRight)
         {
             dir.y = 1;
-            Debug.Log("HitTop");
+    
         }
 
 
         if (transform.position.x >=  BlockRight && transform.position.y + BallRadius > BlockBot && transform.position.y - BallRadius < BlockTop)
         {
-            Debug.Log("HitRight");
+
             dir.x = 1;
         }
 
        else if (transform.position.x <= BlockLeft  && transform.position.y + BallRadius > BlockBot && transform.position.y - BallRadius < BlockTop)
         {
-            Debug.Log("HitLeft");
+
             dir.x = -1;
         }
 
+
+    }
+
+    public void UpdateMe()
+    {
+        transform.position += dir * _movementSpeed * Time.deltaTime;
 
     }
 }
