@@ -8,7 +8,7 @@ public class BallPool : MonoBehaviour
     public GameObject BallPrefab;
     public int MaxBalls;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         ballsPool = new Queue<GameObject>();
 
