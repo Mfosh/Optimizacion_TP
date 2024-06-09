@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     List<GameObject> ActiveBalls;
     [SerializeField] List<GameObject> ActiveBlocks;
     public static GameManager instance;
+    UpdateManager updateManager;
 
     private void Awake()
     {
@@ -15,15 +16,19 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+        updateManager = GetComponent<UpdateManager>();
 
         ballPool = GetComponent<BallPool>();
         ActiveBalls = new List<GameObject>();
+  
     }
     void Start()
     {
 
 
         ActiveBalls.Add(ballPool.GetBall());
+        updateManager.updateables.Add(ActiveBalls[0].GetComponent<Ball>());
+
     }
 
     // Update is called once per frame
@@ -47,9 +52,18 @@ public class GameManager : MonoBehaviour
                 GameObject Ball = ballPool.GetBall();
                 Ball.transform.position = ActiveBalls[i].transform.position;
                 ActiveBalls.Add(Ball);
+                updateManager.updateables.Add(Ball.GetComponent<Ball>());
             }
               
         
         }
     }
+
+    
+    public void AddPowerUpTOUpdateList(IUpdateable updateable)
+    {
+        updateManager.updateables.Add(updateable);
+    }
+
+
 }

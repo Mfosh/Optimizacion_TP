@@ -5,22 +5,30 @@ using UnityEngine;
 public class UpdateManager : MonoBehaviour
 {
 
-    [SerializeField] public IUpdateable[] updateables;
+    [SerializeField] public List <IUpdateable> updateables = new List<IUpdateable>();
     [SerializeField] int a;
     // Start is called before the first frame update
     void Start()
     {
-        updateables = GetComponentsInChildren<IUpdateable>(true);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        var count = updateables.Length;
+        var count = updateables.Count;
         for (int i = 0; i < count; i++)
         {
-            updateables[i].UpdateMe();
+            if (updateables[i] != null)
+            {
+                updateables[i].UpdateMe();
+            }
+            else
+            {
+                updateables.RemoveAt(i);
+                count = updateables.Count;
+            }
+            
         }
     }
 }

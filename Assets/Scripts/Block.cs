@@ -22,7 +22,8 @@ public class Block : MonoBehaviour
         {
             if (PowerUp)
             {
-                Instantiate(PowerUp,this.transform.position, PowerUp.transform.rotation);
+                GameObject powerUP = Instantiate(PowerUp,this.transform.position, PowerUp.transform.rotation);
+                GameManager.instance.AddPowerUpTOUpdateList(powerUP.GetComponent<PowerUpMultiBall>());
             }
             Destroy(this.gameObject);
         }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ball : MonoBehaviour, IUpdateable      
+public class Ball : IUpdateable   
 {
     [SerializeField] float _movementSpeed;
     float angle;
@@ -111,7 +111,7 @@ public class Ball : MonoBehaviour, IUpdateable
 
     }
 
-    public void UpdateMe()
+    public override void UpdateMe()
     {
         transform.position += dir * _movementSpeed * Time.deltaTime;
 
