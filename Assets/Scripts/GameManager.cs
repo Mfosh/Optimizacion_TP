@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] List<GameObject> ActiveBlocks;
     public static GameManager instance;
     UpdateManager updateManager;
+    int PlayerScore;
 
     private void Awake()
     {
@@ -60,6 +61,21 @@ public class GameManager : MonoBehaviour
     {
         ballPool.ReturnToPool(Ball);
         ActiveBalls.Remove(Ball);
+
+        if (ActiveBalls.Count <= 0)
+        {
+            Debug.Log("Perdistes");
+        }
     }
 
+    public void BlockDestroyed(Block block)
+    {
+        ActiveBlocks.Remove(block.gameObject);
+        PlayerScore += block.Score;
+
+        if (ActiveBlocks.Count <= 0)
+        {
+            Debug.Log("Ganastes");
+        }
+    }
 }
