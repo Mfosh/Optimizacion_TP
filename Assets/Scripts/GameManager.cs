@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     BallPool ballPool;
-    List<GameObject> ActiveBalls;
+    [SerializeField]List<GameObject> ActiveBalls;
     [SerializeField] List<GameObject> ActiveBlocks;
     public static GameManager instance;
     UpdateManager updateManager;
@@ -31,16 +31,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            MultiBall();
-        }
-        
-    }
 
     public void MultiBall()
     {
@@ -60,10 +50,16 @@ public class GameManager : MonoBehaviour
     }
 
     
-    public void AddPowerUpTOUpdateList(IUpdateable updateable)
+    public void AddToUpdateList(IUpdateable updateable)
     {
         updateManager.updateables.Add(updateable);
     }
 
+
+    public void LostBall(GameObject Ball)
+    {
+        ballPool.ReturnToPool(Ball);
+        ActiveBalls.Remove(Ball);
+    }
 
 }

@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IUpdateable: MonoBehaviour 
+public abstract class IUpdateable: MonoBehaviour
 {
 
-    public virtual void UpdateMe() { }
+    public abstract void UpdateMe();
+
 }

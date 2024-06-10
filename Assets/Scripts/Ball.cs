@@ -18,13 +18,8 @@ public class Ball : IUpdateable
         Debug.Log(BallRadius);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-       // Rotate();
-        
 
-    }
+
 
     void Rotate()
     {
@@ -41,10 +36,10 @@ public class Ball : IUpdateable
             dir.y = -dir.y;
         }
 
-        if (collision.gameObject.GetComponent<Ball>())
-        {
-            dir.x = -dir.x;
-        }
+       // if (collision.gameObject.GetComponent<Ball>())
+       // {
+       //     dir.x = -dir.x;
+       // }
 
         //BlocksHit
         if (collision.gameObject.GetComponent<Block>())
@@ -115,5 +110,9 @@ public class Ball : IUpdateable
     {
         transform.position += dir * _movementSpeed * Time.deltaTime;
 
+        if (transform.position.y <= -5)
+        {
+            GameManager.instance.LostBall(this.gameObject);
+        }
     }
 }

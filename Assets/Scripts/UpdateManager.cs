@@ -23,9 +23,10 @@ public class UpdateManager : MonoBehaviour
             {
                 updateables[i].UpdateMe();
             }
-            else
+            else 
             {
                 updateables.RemoveAt(i);
+                
                 count = updateables.Count;
             }
             
