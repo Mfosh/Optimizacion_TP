@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerUpMultiBall : MonoBehaviour
+public class PowerUpMultiBall : IUpdateable
 {
     [SerializeField] float _fallSpeed;
     [SerializeField] float _rotationSpeed;
@@ -13,7 +13,7 @@ public class PowerUpMultiBall : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public override void UpdateMe()
     {
         transform.position += new Vector3(0,-1,0) * _fallSpeed * Time.deltaTime;
         transform.Rotate(Vector3.up, _rotationSpeed * Time.deltaTime, Space.Self);

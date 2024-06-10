@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : IUpdateable
 {
     [SerializeField] float _movementSpeed;
     [SerializeField] int _maxLife;
@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+   public override void UpdateMe()
     {
         Vector3 horizontal = new Vector3( Input.GetAxis("Horizontal"),0,0);
 

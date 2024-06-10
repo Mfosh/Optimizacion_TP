@@ -6,6 +6,7 @@ public class Block : MonoBehaviour
 {
     [SerializeField] int HitstoDestroy;
     [SerializeField] int CurrentHits;
+    [SerializeField] GameObject PowerUp;
 
     void Start()
     {
@@ -19,7 +20,11 @@ public class Block : MonoBehaviour
         CurrentHits--;
         if(CurrentHits <= 0)
         {
-
+            if (PowerUp)
+            {
+                GameObject powerUP = Instantiate(PowerUp,this.transform.position, PowerUp.transform.rotation);
+                GameManager.instance.AddPowerUpTOUpdateList(powerUP.GetComponent<PowerUpMultiBall>());
+            }
             Destroy(this.gameObject);
         }
     }

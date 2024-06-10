@@ -8,13 +8,13 @@ public class BallPool : MonoBehaviour
     public GameObject BallPrefab;
     public int MaxBalls;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         ballsPool = new Queue<GameObject>();
 
         for (int i = 0; i < MaxBalls; i++)
         {
-            GameObject Ball = Instantiate(BallPrefab);
+            GameObject Ball = Instantiate(BallPrefab, this.transform);
             Ball.SetActive(false);
             ballsPool.Enqueue(Ball);
         }
