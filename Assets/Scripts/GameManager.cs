@@ -5,10 +5,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     BallPool ballPool;
-    List<GameObject> ActiveBalls;
+    [SerializeField]List<GameObject> ActiveBalls;
     [SerializeField] List<GameObject> ActiveBlocks;
     public static GameManager instance;
     UpdateManager updateManager;
+    int PlayerScore;
 
     private void Awake()
     {
@@ -31,16 +32,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            MultiBall();
-        }
-        
-    }
 
     public void MultiBall()
     {
@@ -60,10 +51,31 @@ public class GameManager : MonoBehaviour
     }
 
     
-    public void AddPowerUpTOUpdateList(IUpdateable updateable)
+    public void AddToUpdateList(IUpdateable updateable)
     {
         updateManager.updateables.Add(updateable);
     }
 
 
+    public void LostBall(GameObject Ball)
+    {
+        ballPool.ReturnToPool(Ball);
+        ActiveBalls.Remove(Ball);
+
+        if (ActiveBalls.Count <= 0)
+        {
+            Debug.Log("Perdistes");
+        }
+    }
+
+    public void BlockDestroyed(Block block)
+    {
+        ActiveBlocks.Remove(block.gameObject);
+        PlayerScore += block.Score;
+
+        if (ActiveBlocks.Count <= 0)
+        {
+            Debug.Log("Ganastes");
+        }
+    }
 }
