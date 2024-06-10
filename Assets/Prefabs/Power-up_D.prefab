@@ -22,11 +22,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f40a5e04393c7394d91c67126cd48491, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f40a5e04393c7394d91c67126cd48491, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f40a5e04393c7394d91c67126cd48491, type: 3}
       propertyPath: m_LocalRotation.y
@@ -34,11 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f40a5e04393c7394d91c67126cd48491, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f40a5e04393c7394d91c67126cd48491, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f40a5e04393c7394d91c67126cd48491, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -87,10 +87,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.0035778838
+  m_Height: 0.012575105
+  m_Direction: 0
+  m_Center: {x: 0.00026945173, y: -4.2280593e-19, z: 0.000238083}
 --- !u!114 &-8113681951301742525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,5 +103,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a44f50c38d3ce74c8acd49d851e63f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fallSpeed: 2
-  _rotationSpeed: 50
+  _fallSpeed: 1.36
+  _rotationSpeed: 81.1
