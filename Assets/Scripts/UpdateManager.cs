@@ -19,7 +19,7 @@ public class UpdateManager : MonoBehaviour
         var count = updateables.Count;
         for (int i = 0; i < count; i++)
         {
-            if (updateables[i] != null)
+            if (updateables[i] != null && updateables[i].isActiveAndEnabled)
             {
                 updateables[i].UpdateMe();
             }

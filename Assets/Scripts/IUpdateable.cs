@@ -7,4 +7,6 @@ public abstract class IUpdateable: MonoBehaviour
 
     public abstract void UpdateMe();
 
+    bool isActive;
+
 }

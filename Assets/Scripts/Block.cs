@@ -22,7 +22,7 @@ public class Block : MonoBehaviour
         CurrentHits--;
         if(CurrentHits <= 0)
         {
-            if (PowerUp)
+            if (PowerUp != null)
             {
                 GameObject powerUP = Instantiate(PowerUp,this.transform.position, PowerUp.transform.rotation);
                 GameManager.instance.AddToUpdateList(powerUP.GetComponent<PowerUpMultiBall>());
