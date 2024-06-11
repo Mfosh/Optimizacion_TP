@@ -9,13 +9,19 @@ public class Ball : IUpdateable
     [SerializeField] float RotationSpeed;
     Vector3 dir;
     float BallRadius;
-
+    public bool moving;
+    Transform PlayerPos;
     // Start is called before the first frame update
     void Start()
     {
-        dir = new Vector2 (-1, 1);
+        
         BallRadius = GetComponent<SphereCollider>().radius * Mathf.Max(transform.lossyScale.x, transform.lossyScale.y, transform.lossyScale.z);
         Debug.Log(BallRadius);
+        if (!moving)
+        {
+            dir = new Vector2(0, 0);
+        }
+        Player.OnStartMatch += StartMovement;
     }
 
 
@@ -105,11 +111,25 @@ public class Ball : IUpdateable
 
     public override void UpdateMe()
     {
-        transform.position += dir * _movementSpeed * Time.deltaTime;
+
+        Move(dir);
 
         if (transform.position.y <= -5)
         {
             GameManager.instance.LostBall(this.gameObject);
         }
     }
+
+
+    void Move(Vector3 direction)
+    {
+        transform.position += direction * _movementSpeed * Time.deltaTime;
+    }
+
+    public void StartMovement()
+    {
+        dir = new Vector2(Random.RandomRange(-1,1), 1);
+        Debug.Log("StartMoving");
+    }
+
 }

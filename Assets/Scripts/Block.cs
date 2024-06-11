@@ -20,7 +20,7 @@ public class Block : MonoBehaviour
     public void OnHit()
     {
         CurrentHits--;
-        if(CurrentHits == 0)
+        if(CurrentHits <= 0)
         {
             if (PowerUp)
             {

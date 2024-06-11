@@ -14,7 +14,7 @@ public class BallPool : MonoBehaviour
 
         for (int i = 0; i < MaxBalls; i++)
         {
-            GameObject Ball = Instantiate(BallPrefab, this.transform);
+            GameObject Ball = Instantiate(BallPrefab);
             Ball.SetActive(false);
             ballsPool.Enqueue(Ball);
         }
