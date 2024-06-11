@@ -1,0 +1,200 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: LVL1 Assets
+  m_EditorClassIdentifier: 
+  m_GroupName: LVL1 Assets
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 871f4dff84b5ace429dda7018eac75fa
+  m_SerializeEntries:
+  - m_GUID: af495d4cb2bf8704e8fd8182ad320672
+    m_Address: Assets/Image/Arkanoid_Credits.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 11a692c9bcee73a40aa1a1d5342d7b38
+    m_Address: Assets/Fonts/iomanoid.ttf
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef1296210f0f5db43994b2e2e9e03041
+    m_Address: Assets/Fonts/iomanoid back.ttf
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b246e4ebb33a0243b7a2f1eb23ab273
+    m_Address: Assets/Fonts/iomanoid front.ttf
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d27735ea5dfee840a3307c0f5264db3
+    m_Address: Assets/Fonts/iomanoid front SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3261580c04f23724794ac713010bd816
+    m_Address: Assets/Fonts/iomanoid SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b94ebde90575c2449cdf7a8c763aca1
+    m_Address: Assets/Fonts/iomanoid shine.ttf
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 99fc8dd21777bf24086fb26a1f9401e7
+    m_Address: Assets/Fonts/iomanoid shine SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 596f6a152f0c6e5459cbabd14055f7b3
+    m_Address: Assets/Prefabs/Ball.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3f1192dca37375644861957932d7b7b5
+    m_Address: Assets/Prefabs/BlockBlue.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 123f788051cee0540b4f503d47259bb7
+    m_Address: Assets/Prefabs/BlockGreen.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a3e2ad1696bc00b40896442f34136cdf
+    m_Address: Assets/Prefabs/BlockOrange.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1363ee2b8ea04bf4b8b1b412bc16fc96
+    m_Address: Assets/Prefabs/BlockRed.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e55cfdcd743230549a1260c78771923f
+    m_Address: Assets/Prefabs/BlockViolet.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b667ba46abf091d428ac60dc584c8120
+    m_Address: Assets/Prefabs/BlockYellow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 63ada1fbf2d26274fbc4e20a09553e94
+    m_Address: Assets/Prefabs/Power-up_D.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 95000658a31bbac4bbe2e142d326a8d0
+    m_Address: Assets/Prefabs/PowerUp.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66667ef00df47884ca1f24a18b912967
+    m_Address: Assets/Prefabs/Vaus.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9fc0d4010bbf28b4594072e72b8655ab
+    m_Address: Assets/Scenes/Level.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17b5bc2541d56af41be2d8297a1e75bb
+    m_Address: Assets/Scenes/MainMenu.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76cd879c95c19e947863bcdfeebaa23f
+    m_Address: Assets/Sounds/NES - Arkanoid - Sound Effects
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 447601be170fb054d85e0160c252e551
+    m_Address: Assets/Tileset/level_background_example.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a486117a936809439f8ca6b95f52fcb
+    m_Address: Assets/Tileset/seamless_tile_level_background.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 526dfe03c34a43746a7bbbb59ac85695
+    m_Address: Assets/3D Models/Ball.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 42234c5c424d5fe4fa6e19c489f2788e
+    m_Address: Assets/3D Models/BlockBlue.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 240ebbffa115d1346b0fc8a634f403ac
+    m_Address: Assets/3D Models/BlockGreen.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f391eabb66144a4aa4e80758992ca13
+    m_Address: Assets/3D Models/BlockOrange.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2dfafa52f9a328e49af4ef44551bb2b6
+    m_Address: Assets/3D Models/BlockRed.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2aad6ac86e073734fac62d96cd08cd6c
+    m_Address: Assets/3D Models/BlockViolet.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c1d92c037bcfcd14f90e67d43d35d577
+    m_Address: Assets/3D Models/BlockYellow.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aeaf377395ce0ea4396d49ab157c1ba0
+    m_Address: Assets/3D Models/Power-up_C.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f40a5e04393c7394d91c67126cd48491
+    m_Address: Assets/3D Models/Power-up_D.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8ec6b509269d174cb459783b1d33d1c
+    m_Address: Assets/3D Models/Power-up_L.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c7f1bd07fab3c345ba210ab391c166b
+    m_Address: Assets/3D Models/Power-up_P.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4613d343e116ce043b666d2fa73cc056
+    m_Address: Assets/3D Models/Vaus.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: a0f1c1f173b1f5548a30d24ec3732036, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 4476118366be82d4fad6fc2c8d1c5de7, type: 2}
+    - {fileID: 11400000, guid: 0c869fb51f239c54fb28aa0b85c5dcf9, type: 2}
