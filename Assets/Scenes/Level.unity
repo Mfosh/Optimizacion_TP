@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -199,7 +199,7 @@ PrefabInstance:
     - target: {fileID: -8986785117303435002, guid: 3f1192dca37375644861957932d7b7b5, type: 3}
       propertyPath: PowerUp
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8950520366633058177, guid: 63ada1fbf2d26274fbc4e20a09553e94, type: 3}
     - target: {fileID: -8986785117303435002, guid: 3f1192dca37375644861957932d7b7b5, type: 3}
       propertyPath: HitstoDestroy
       value: 2
@@ -497,6 +497,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  panelWin: {fileID: 1423612805}
+  panelLose: {fileID: 1715770738}
 --- !u!4 &191820714
 Transform:
   m_ObjectHideFlags: 0

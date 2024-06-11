@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     UpdateManager updateManager;
     int PlayerScore;
+    public GameObject panelWin;
+    public GameObject panelLose;
 
     private void Awake()
     {
@@ -64,7 +66,7 @@ public class GameManager : MonoBehaviour
 
         if (ActiveBalls.Count <= 0)
         {
-            Debug.Log("Perdistes");
+            panelLose.SetActive(true);
         }
     }
 
@@ -77,7 +79,7 @@ public class GameManager : MonoBehaviour
 
         if (ActiveBlocks.Count <= 0)
         {
-            Debug.Log("Ganastes");
+            panelWin.SetActive(true);
         }
     }
 }
