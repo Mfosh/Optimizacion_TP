@@ -487,18 +487,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActiveBalls: []
   ActiveBlocks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 619774210}
+  - {fileID: 411655894}
+  - {fileID: 1813044605}
+  - {fileID: 804818471}
+  - {fileID: 734195933}
+  - {fileID: 1836262362}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   panelWin: {fileID: 1423612805}
   panelLose: {fileID: 1715770738}
+  score: {fileID: 587965683}
 --- !u!4 &191820714
 Transform:
   m_ObjectHideFlags: 0
@@ -1024,6 +1025,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f1192dca37375644861957932d7b7b5, type: 3}
+--- !u!1 &411655894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7004008268828138783, guid: 3f1192dca37375644861957932d7b7b5, type: 3}
+  m_PrefabInstance: {fileID: 658471597}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &414702784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1212,7 +1218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7866820902313820449, guid: a3e2ad1696bc00b40896442f34136cdf, type: 3}
       propertyPath: m_Name
-      value: BlockOrange (8)
+      value: BlockOrange (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1353,6 +1359,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587965681}
   m_CullTransparentMesh: 1
+--- !u!1 &619774210 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7004008268828138783, guid: 3f1192dca37375644861957932d7b7b5, type: 3}
+  m_PrefabInstance: {fileID: 1337657964}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &658471597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1523,6 +1534,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &734195933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7004008268828138783, guid: 3f1192dca37375644861957932d7b7b5, type: 3}
+  m_PrefabInstance: {fileID: 210550544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &741142356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1775,6 +1791,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 123f788051cee0540b4f503d47259bb7, type: 3}
+--- !u!1 &804818471 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7004008268828138783, guid: 3f1192dca37375644861957932d7b7b5, type: 3}
+  m_PrefabInstance: {fileID: 83122898}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &833443020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3527,7 +3548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9033825256970799792, guid: 1363ee2b8ea04bf4b8b1b412bc16fc96, type: 3}
       propertyPath: m_Name
-      value: BlockRed (3)
+      value: BlockRed (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4534,6 +4555,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 123f788051cee0540b4f503d47259bb7, type: 3}
+--- !u!1 &1813044605 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7004008268828138783, guid: 3f1192dca37375644861957932d7b7b5, type: 3}
+  m_PrefabInstance: {fileID: 29943688}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1813486611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4599,6 +4625,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e55cfdcd743230549a1260c78771923f, type: 3}
+--- !u!1 &1836262362 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7004008268828138783, guid: 3f1192dca37375644861957932d7b7b5, type: 3}
+  m_PrefabInstance: {fileID: 203795799}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1848217917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4917,7 +4948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9033825256970799792, guid: 1363ee2b8ea04bf4b8b1b412bc16fc96, type: 3}
       propertyPath: m_Name
-      value: BlockRed (9)
+      value: BlockRed (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5398,7 +5429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3171489703987001221, guid: b667ba46abf091d428ac60dc584c8120, type: 3}
       propertyPath: m_Name
-      value: BlockYellow (4)
+      value: BlockYellow (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5528,7 +5559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9033825256970799792, guid: 1363ee2b8ea04bf4b8b1b412bc16fc96, type: 3}
       propertyPath: m_Name
-      value: BlockRed (10)
+      value: BlockRed (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5686,12 +5717,6 @@ SceneRoots:
   - {fileID: 1337657964}
   - {fileID: 658471597}
   - {fileID: 29943688}
-  - {fileID: 83122898}
-  - {fileID: 210550544}
-  - {fileID: 203795799}
-  - {fileID: 1035291356}
-  - {fileID: 1667699864}
-  - {fileID: 1706677089}
   - {fileID: 754531123}
   - {fileID: 253150012}
   - {fileID: 414702784}
@@ -5701,6 +5726,12 @@ SceneRoots:
   - {fileID: 1489953971}
   - {fileID: 406315197}
   - {fileID: 1848217917}
+  - {fileID: 83122898}
+  - {fileID: 203795799}
+  - {fileID: 1035291356}
+  - {fileID: 1706677089}
+  - {fileID: 210550544}
+  - {fileID: 1667699864}
   - {fileID: 833443020}
   - {fileID: 1628089338}
   - {fileID: 2143432119}
@@ -5712,9 +5743,9 @@ SceneRoots:
   - {fileID: 2064397697}
   - {fileID: 243506808}
   - {fileID: 2118756239}
-  - {fileID: 2041264549}
   - {fileID: 1999325929}
   - {fileID: 782557102}
+  - {fileID: 2041264549}
   - {fileID: 94654496}
   - {fileID: 1490163299}
   - {fileID: 1965817335}
@@ -5728,14 +5759,14 @@ SceneRoots:
   - {fileID: 1351299267}
   - {fileID: 467573575}
   - {fileID: 1152299500}
+  - {fileID: 784625047}
+  - {fileID: 1897523628}
+  - {fileID: 2035514111}
+  - {fileID: 1486858294}
+  - {fileID: 1271040016}
   - {fileID: 135924187}
   - {fileID: 741142356}
   - {fileID: 1519787713}
   - {fileID: 1462991205}
   - {fileID: 1775872379}
   - {fileID: 188722785}
-  - {fileID: 784625047}
-  - {fileID: 1897523628}
-  - {fileID: 2035514111}
-  - {fileID: 1486858294}
-  - {fileID: 1271040016}

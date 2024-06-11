@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     int PlayerScore;
     public GameObject panelWin;
     public GameObject panelLose;
+    public TMP_Text score;
 
     private void Awake()
     {
@@ -27,7 +29,6 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-
 
         ActiveBalls.Add(ballPool.GetBall());
         updateManager.updateables.Add(ActiveBalls[0].GetComponent<Ball>());
@@ -76,6 +77,8 @@ public class GameManager : MonoBehaviour
         ActiveBlocks.Remove(block.gameObject);
         PlayerScore += Points;
         Debug.Log(PlayerScore);
+
+        score.text = PlayerScore.ToString();
 
         if (ActiveBlocks.Count <= 0)
         {
