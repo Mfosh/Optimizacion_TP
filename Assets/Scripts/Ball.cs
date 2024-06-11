@@ -9,7 +9,7 @@ public class Ball : IUpdateable
     [SerializeField] float RotationSpeed;
     Vector3 dir;
     float BallRadius;
-    Block blocks;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,10 +44,7 @@ public class Ball : IUpdateable
         //BlocksHit
         if (collision.gameObject.GetComponent<Block>())
         {
-            if(blocks == null)
-            {
-                blocks = collision.gameObject.GetComponent<Block>();
-            }
+
             BlockCollision(collision.gameObject);
             collision.gameObject.GetComponent<Block>().OnHit();
          

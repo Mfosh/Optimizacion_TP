@@ -68,10 +68,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void BlockDestroyed(Block block)
+    public void BlockDestroyed(Block block, int Points)
     {
+        Debug.Log(Points);
         ActiveBlocks.Remove(block.gameObject);
-        PlayerScore += block.Score;
+        PlayerScore += Points;
+        Debug.Log(PlayerScore);
 
         if (ActiveBlocks.Count <= 0)
         {

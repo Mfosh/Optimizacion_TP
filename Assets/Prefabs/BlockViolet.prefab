@@ -128,4 +128,4 @@ MonoBehaviour:
   HitstoDestroy: 2
   CurrentHits: 0
   PowerUp: {fileID: 2490557927230511932, guid: 95000658a31bbac4bbe2e142d326a8d0, type: 3}
-  Score: 28
+  Points: 10
