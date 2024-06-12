@@ -8,8 +8,10 @@ public class Player :IUpdateable
     [SerializeField] float _movementSpeed;
     [SerializeField] int _maxLife;
     [SerializeField] int _currentLife;
+    bool MatchStarted;
     public static event Action OnStartMatch;
     public static event Action OnLoseLife;
+    BoxCollider boxCollider;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +26,10 @@ public class Player :IUpdateable
 
         transform.position += horizontal * _movementSpeed * Time.deltaTime;
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -5.6f, 4.91f), transform.position.y, transform.position.z);
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && !MatchStarted)
         {
             OnStartMatch?.Invoke();
+            MatchStarted = true;
         }
         
     }
@@ -39,7 +42,7 @@ public class Player :IUpdateable
     public void LoseLife()
     {
         --_currentLife;
-
+        MatchStarted = false;
     }
 
 

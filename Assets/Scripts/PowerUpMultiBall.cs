@@ -11,7 +11,7 @@ public class PowerUpMultiBall : IUpdateable
     public override void UpdateMe()
     {
         transform.position += new Vector3(0,-1,0) * _fallSpeed * Time.deltaTime;
-        transform.Rotate(Vector3.right, _rotationSpeed * Time.deltaTime, Space.Self);
+        transform.Rotate(Vector3.left, _rotationSpeed * Time.deltaTime, Space.Self);
     }
 
     private void OnCollisionEnter(Collision collision)

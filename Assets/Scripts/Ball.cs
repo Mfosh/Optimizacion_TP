@@ -18,7 +18,7 @@ public class Ball : IUpdateable
     {
         audio = GetComponent<AudioSource>();   
         BallRadius = GetComponent<SphereCollider>().radius * Mathf.Max(transform.lossyScale.x, transform.lossyScale.y, transform.lossyScale.z);
-        Debug.Log(BallRadius);
+
         if (!moving)
         {
             dir = new Vector2(0, 0);
@@ -144,7 +144,7 @@ public class Ball : IUpdateable
         {
             dir.x = 0.5f;
         }
-        Debug.Log("StartMoving");
+
     }
 
     public void Reset(GameObject Player)

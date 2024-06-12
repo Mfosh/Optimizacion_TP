@@ -96,6 +96,7 @@ public class GameManager : MonoBehaviour
             {
                 player.LoseLife();
                 BallSprite[lives].enabled = false;
+                DestroyPowerUps();
                 RestartLevel();
             }
             else
@@ -106,9 +107,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void DestroyPowerUps()
+    {
+        GameObject[] activepowerUP = GameObject.FindGameObjectsWithTag("PowerUp");
+        if (activepowerUP != null)
+        {
+            foreach (var powerup in activepowerUP)
+            {
+                Destroy(powerup);
+            }
+        }
+    }
     public void BlockDestroyed(Block block, int Points)
     {
-        Debug.Log(Points);
+
         audio.Play();
         ActiveBlocks.Remove(block.gameObject);
         PlayerScore += Points;
