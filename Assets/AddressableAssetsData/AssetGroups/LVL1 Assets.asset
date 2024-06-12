@@ -17,11 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 871f4dff84b5ace429dda7018eac75fa
   m_SerializeEntries:
-  - m_GUID: af495d4cb2bf8704e8fd8182ad320672
-    m_Address: Assets/Image/Arkanoid_Credits.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 11a692c9bcee73a40aa1a1d5342d7b38
     m_Address: Assets/Fonts/iomanoid.ttf
     m_ReadOnly: 0
