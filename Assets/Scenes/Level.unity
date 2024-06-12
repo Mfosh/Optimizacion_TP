@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -467,6 +467,7 @@ GameObject:
   - component: {fileID: 191820713}
   - component: {fileID: 191820712}
   - component: {fileID: 191820715}
+  - component: {fileID: 191820716}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -558,6 +559,7 @@ MonoBehaviour:
   - {fileID: 1999325930}
   - {fileID: 782557103}
   - {fileID: 2041264550}
+  player: {fileID: 663626100}
   panelWin: {fileID: 1423612805}
   panelLose: {fileID: 1715770738}
   score: {fileID: 587965683}
@@ -588,9 +590,105 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e02c5f5d48ce302459b8682e5f6898e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateables:
-  - {fileID: 663626100}
+  updateables: []
   a: 0
+  isplaying: 0
+--- !u!82 &191820716
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191820711}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 834b9c4352b46494f82e99e6a4bb5036, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &200504249
 GameObject:
   m_ObjectHideFlags: 0
@@ -2105,6 +2203,10 @@ PrefabInstance:
       value: Vaus
       objectReference: {fileID: 0}
     - target: {fileID: 4094883001449878411, guid: 66667ef00df47884ca1f24a18b912967, type: 3}
+      propertyPath: m_Mass
+      value: 9.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094883001449878411, guid: 66667ef00df47884ca1f24a18b912967, type: 3}
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
@@ -2119,6 +2221,10 @@ PrefabInstance:
     - target: {fileID: 4094883001449878411, guid: 66667ef00df47884ca1f24a18b912967, type: 3}
       propertyPath: m_IsKinematic
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837869358350186919, guid: 66667ef00df47884ca1f24a18b912967, type: 3}
+      propertyPath: _maxLife
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4837869358350186919, guid: 66667ef00df47884ca1f24a18b912967, type: 3}
       propertyPath: _movementSpeed
@@ -2146,6 +2252,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6724700441140682658, guid: 66667ef00df47884ca1f24a18b912967, type: 3}
       propertyPath: m_Direction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724700441140682658, guid: 66667ef00df47884ca1f24a18b912967, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2407,7 +2517,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MainMenu
+          m_StringArgument: Assets/Scenes/MainMenu.unity
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1033254078

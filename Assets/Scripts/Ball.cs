@@ -7,10 +7,11 @@ public class Ball : IUpdateable
     [SerializeField] float _movementSpeed;
     float angle;
     [SerializeField] float RotationSpeed;
-    Vector3 dir;
+    public Vector3 dir;
     float BallRadius;
     public bool moving;
-    Transform PlayerPos;
+    GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -111,11 +112,18 @@ public class Ball : IUpdateable
 
     public override void UpdateMe()
     {
-
-        Move(dir);
-
+        if (!moving)
+        {
+            FollowPlayer();
+        }
+        else
+        {
+            Move(dir);
+        }
         if (transform.position.y <= -5)
         {
+            dir = Vector3.zero;
+            Debug.Log(dir);
             GameManager.instance.LostBall(this.gameObject);
         }
     }
@@ -128,6 +136,7 @@ public class Ball : IUpdateable
 
     public void StartMovement()
     {
+        moving = true;
         dir = new Vector2(Random.RandomRange(-1,1), 1);
         if (dir.x == 0)
         {
@@ -136,4 +145,20 @@ public class Ball : IUpdateable
         Debug.Log("StartMoving");
     }
 
+    public void Reset(GameObject Player)
+    {
+       transform.position = new Vector3(0, -2, 1);
+        dir = Vector3.zero;
+        moving = false;
+        player = Player;
+    }
+
+    void FollowPlayer()
+    {
+        if (player != null)
+        {
+            transform.position = new Vector3(player.transform.position.x,player.transform.position.y +0.3f, player.transform.position.z);
+
+        }
+    }
 }

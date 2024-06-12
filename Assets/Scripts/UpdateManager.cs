@@ -7,29 +7,33 @@ public class UpdateManager : MonoBehaviour
 
     [SerializeField] public List <IUpdateable> updateables = new List<IUpdateable>();
     [SerializeField] int a;
+    public bool isplaying;
     // Start is called before the first frame update
     void Start()
     {
-
+        isplaying = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        var count = updateables.Count;
-        for (int i = 0; i < count; i++)
+        if (isplaying)
         {
-            if (updateables[i] != null && updateables[i].isActiveAndEnabled)
+            var count = updateables.Count;
+            for (int i = 0; i < count; i++)
             {
-                updateables[i].UpdateMe();
+                if (updateables[i] != null && updateables[i].isActiveAndEnabled)
+                {
+                    updateables[i].UpdateMe();
+                }
+                else
+                {
+                    updateables.RemoveAt(i);
+
+                    count = updateables.Count;
+                }
+
             }
-            else 
-            {
-                updateables.RemoveAt(i);
-                
-                count = updateables.Count;
-            }
-            
         }
     }
 }

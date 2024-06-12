@@ -11,11 +11,11 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     UpdateManager updateManager;
     int PlayerScore;
-    Player player;
+    [SerializeField] Player player;
     public GameObject panelWin;
     public GameObject panelLose;
     public TMP_Text score;
-
+    AudioSource audio;
     private void Awake()
     {
         if(instance == null)
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
         updateManager = GetComponent<UpdateManager>();
-
+        audio = GetComponent<AudioSource>();
         ballPool = GetComponent<BallPool>();
         ActiveBalls = new List<GameObject>();
   
@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
         updateManager.updateables.Add(ActiveBalls[0].GetComponent<Ball>());
         AddToUpdateList(player);
         Player.OnStartMatch += LaunchBalls;
+        Player.OnLoseLife += RestartLevel;
 
     }
 
@@ -82,13 +83,20 @@ public class GameManager : MonoBehaviour
 
         if (ActiveBalls.Count <= 0)
         {
-            panelLose.SetActive(true);
+            if (player.GetLifes() > 0)
+            {
+                player.LoseLife();
+                RestartLevel();
+            }
+            else 
+                panelLose.SetActive(true);
         }
     }
 
     public void BlockDestroyed(Block block, int Points)
     {
         Debug.Log(Points);
+        audio.Play();
         ActiveBlocks.Remove(block.gameObject);
         PlayerScore += Points;
         Debug.Log(PlayerScore);
@@ -98,6 +106,19 @@ public class GameManager : MonoBehaviour
         if (ActiveBlocks.Count <= 0)
         {
             panelWin.SetActive(true);
+            updateManager.isplaying = false;
         }
+    }
+
+    void RestartLevel()
+    {
+
+        GameObject Ball = ballPool.GetBall();
+        ActiveBalls.Add(Ball);
+        Ball ball = Ball.GetComponent<Ball>();
+        ball.Reset(player.gameObject);
+        updateManager.updateables.Add(ball);
+        
+        
     }
 }

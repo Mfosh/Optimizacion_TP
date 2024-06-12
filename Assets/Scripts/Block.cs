@@ -8,10 +8,12 @@ public class Block : MonoBehaviour
     [SerializeField] int CurrentHits;
     [SerializeField] GameObject PowerUp;
     [SerializeField] public int Points;
+    AudioSource audio;
     
 
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         CurrentHits = HitstoDestroy;
     }
 
@@ -19,6 +21,7 @@ public class Block : MonoBehaviour
 
     public void OnHit()
     {
+        audio.Play();
         CurrentHits--;
         if(CurrentHits <= 0)
         {
