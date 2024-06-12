@@ -26,7 +26,7 @@ public class Player :IUpdateable
 
         transform.position += horizontal * _movementSpeed * Time.deltaTime;
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -5.6f, 4.91f), transform.position.y, transform.position.z);
-        if (Input.GetKeyDown(KeyCode.Tab) && !MatchStarted)
+        if (Input.GetKeyDown(KeyCode.Space) && !MatchStarted)
         {
             OnStartMatch?.Invoke();
             MatchStarted = true;
