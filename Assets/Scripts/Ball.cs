@@ -129,6 +129,10 @@ public class Ball : IUpdateable
     public void StartMovement()
     {
         dir = new Vector2(Random.RandomRange(-1,1), 1);
+        if (dir.x == 0)
+        {
+            dir.x = 0.5f;
+        }
         Debug.Log("StartMoving");
     }
 
