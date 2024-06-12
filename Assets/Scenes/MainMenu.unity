@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 166264371}
   - component: {fileID: 166264370}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TitleCredits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -247,10 +247,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1128032005}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.3734792, y: 0.80211115}
-  m_AnchorMax: {x: 0.6573335, y: 0.8985926}
-  m_AnchoredPosition: {x: -156, y: 30}
-  m_SizeDelta: {x: -346, y: -54}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.0000076294, y: -258}
+  m_SizeDelta: {x: 564.733, y: 125.996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &166264370
 MonoBehaviour:
@@ -274,15 +274,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Made By:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 70a2a1fc1546d5943aa72fc16eb29084, type: 2}
-  m_sharedMaterial: {fileID: -5663136684139318029, guid: 70a2a1fc1546d5943aa72fc16eb29084, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6d27735ea5dfee840a3307c0f5264db3, type: 2}
+  m_sharedMaterial: {fileID: -9191690647276272364, guid: 6d27735ea5dfee840a3307c0f5264db3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278213375
+  m_fontColor: {r: 1, g: 0.35391176, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -306,8 +306,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -335,7 +335,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -337.85132, w: -59.529114}
+  m_margin: {x: 0, y: 0, z: -0.6171875, w: 0.634739}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -479,6 +479,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 969213050}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &180750018
 MonoBehaviour:
@@ -664,7 +676,7 @@ GameObject:
   - component: {fileID: 408096928}
   - component: {fileID: 408096927}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Schoolmates
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -725,8 +737,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4294954596
+  m_fontColor: {r: 0.3915094, g: 0.8094916, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -779,7 +791,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -257.68652, y: 0, z: -434.54492, w: -182.5625}
+  m_margin: {x: -257.68652, y: 0, z: -434.54492, w: -320.39157}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -874,6 +886,7 @@ RectTransform:
   - {fileID: 1100208863}
   - {fileID: 821465235}
   - {fileID: 669812962}
+  - {fileID: 1128032005}
   - {fileID: 1304432991}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1270,12 +1283,12 @@ GameObject:
   - component: {fileID: 969213053}
   - component: {fileID: 969213052}
   m_Layer: 5
-  m_Name: Start (1)
+  m_Name: CreditsBackTo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &969213051
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1289,7 +1302,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1270392837}
-  m_Father: {fileID: 1128032005}
+  m_Father: {fileID: 1304432991}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1377,6 +1390,18 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1128032004}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 969213050}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -1801,8 +1826,7 @@ RectTransform:
   m_Children:
   - {fileID: 166264369}
   - {fileID: 408096926}
-  - {fileID: 969213051}
-  m_Father: {fileID: 1304432991}
+  m_Father: {fileID: 618040024}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1823,7 +1847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1906,8 +1930,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back to Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6d27735ea5dfee840a3307c0f5264db3, type: 2}
-  m_sharedMaterial: {fileID: -9191690647276272364, guid: 6d27735ea5dfee840a3307c0f5264db3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2012,10 +2036,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1128032005}
   - {fileID: 1989607546}
   - {fileID: 180750016}
   - {fileID: 1331176038}
+  - {fileID: 969213051}
   m_Father: {fileID: 618040024}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
