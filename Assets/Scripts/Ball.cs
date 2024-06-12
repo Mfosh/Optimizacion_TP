@@ -7,15 +7,16 @@ public class Ball : IUpdateable
     [SerializeField] float _movementSpeed;
     float angle;
     [SerializeField] float RotationSpeed;
-    public Vector3 dir;
+    Vector3 dir;
     float BallRadius;
     public bool moving;
     GameObject player;
+    AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audio = GetComponent<AudioSource>();   
         BallRadius = GetComponent<SphereCollider>().radius * Mathf.Max(transform.lossyScale.x, transform.lossyScale.y, transform.lossyScale.z);
         Debug.Log(BallRadius);
         if (!moving)
@@ -40,6 +41,7 @@ public class Ball : IUpdateable
         //Check with player
         if (collision.gameObject.tag == "Player")
         {
+            audio.Play();
             dir.y = -dir.y;
         }
 
@@ -137,7 +139,7 @@ public class Ball : IUpdateable
     public void StartMovement()
     {
         moving = true;
-        dir = new Vector2(Random.RandomRange(-1,1), 1);
+        dir = new Vector2(Random.Range(-1f,1f), 1);
         if (dir.x == 0)
         {
             dir.x = 0.5f;

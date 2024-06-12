@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -16,6 +17,9 @@ public class GameManager : MonoBehaviour
     public GameObject panelLose;
     public TMP_Text score;
     AudioSource audio;
+
+    [SerializeField] Image[] BallSprite;
+
     private void Awake()
     {
         if(instance == null)
@@ -37,6 +41,10 @@ public class GameManager : MonoBehaviour
         Player.OnStartMatch += LaunchBalls;
         Player.OnLoseLife += RestartLevel;
 
+        for (int i = 0; i < BallSprite.Length; i++)
+        {
+            BallSprite[i].enabled = true;
+        }
     }
 
 
@@ -83,13 +91,18 @@ public class GameManager : MonoBehaviour
 
         if (ActiveBalls.Count <= 0)
         {
-            if (player.GetLifes() > 0)
+            int lives = player.GetLifes();
+            if (lives > 0)
             {
                 player.LoseLife();
+                BallSprite[lives].enabled = false;
                 RestartLevel();
             }
-            else 
+            else
+            {
+                BallSprite[lives].enabled = false;
                 panelLose.SetActive(true);
+            }
         }
     }
 
@@ -119,6 +132,7 @@ public class GameManager : MonoBehaviour
         ball.Reset(player.gameObject);
         updateManager.updateables.Add(ball);
         
+
         
     }
 }
