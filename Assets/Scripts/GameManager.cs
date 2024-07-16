@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
         ActiveBalls.Add(ballPool.GetBall());
         updateManager.updateables.Add(ActiveBalls[0].GetComponent<Ball>());
         AddToUpdateList(player);
-        Player.OnStartMatch += LaunchBalls;
+      
         Player.OnLoseLife += RestartLevel;
 
         for (int i = 0; i < BallSprite.Length; i++)
@@ -75,14 +75,6 @@ public class GameManager : MonoBehaviour
         updateManager.updateables.Add(updateable);
     }
 
-    void LaunchBalls()
-    {
-        int size = ActiveBalls.Count;
-        for (int i = 0; i < size; i++)
-        {
-
-        }
-    }
 
     public void LostBall(GameObject Ball)
     {

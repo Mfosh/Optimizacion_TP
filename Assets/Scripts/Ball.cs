@@ -8,11 +8,14 @@ public class Ball : IUpdateable
     float angle;
     [SerializeField] float RotationSpeed;
     Vector3 dir;
+    Vector3 ResetPos;
+    Vector3 Yoffset;
+    [SerializeField] float radius;
     float BallRadius;
     public bool moving;
     GameObject player;
     AudioSource audio;
-
+    Collider[] cols= new Collider[10];
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +26,14 @@ public class Ball : IUpdateable
         {
             dir = new Vector2(0, 0);
         }
+        else
+        {
+            dir = new Vector2(0, 1);
+            dir.x = GiveRandom();
+        }
         Player.OnStartMatch += StartMovement;
+
+        Yoffset = new Vector3(0, 0.5f, 0);
     }
 
 
@@ -35,30 +45,34 @@ public class Ball : IUpdateable
         transform.rotation = Quaternion.AngleAxis(angle, transform.forward);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void CheckCollision(Collider collision)
     {
   
         //Check with player
         if (collision.gameObject.tag == "Player")
         {
             audio.Play();
-            dir.y = -dir.y;
+            if (dir.y < 0) 
+            {
+                dir.y = -dir.y;
+            }
+            
         }
-
+ 
        // if (collision.gameObject.GetComponent<Ball>())
        // {
        //     dir.x = -dir.x;
        // }
-
+ 
         //BlocksHit
         if (collision.gameObject.GetComponent<Block>())
         {
-
+ 
             BlockCollision(collision.gameObject);
             collision.gameObject.GetComponent<Block>().OnHit();
          
         }
-
+ 
         //SideWalls
         if (collision.gameObject.layer == 6)
             dir.x = -dir.x;
@@ -122,7 +136,17 @@ public class Ball : IUpdateable
         {
             Move(dir);
         }
-        if (transform.position.y <= -5)
+
+        int hit = Physics.OverlapSphereNonAlloc(transform.position, radius, cols);
+        Debug.Log(hit);
+        if (hit >= 2)
+        {
+            for (int i = 0; i < hit; i++)
+            {
+                CheckCollision(cols[i]);
+            }
+        }
+        if (transform.position.y <= -4.90)
         {
             dir = Vector3.zero;
             Debug.Log(dir);
@@ -136,20 +160,30 @@ public class Ball : IUpdateable
         transform.position += direction * _movementSpeed * Time.deltaTime;
     }
 
+    float GiveRandom()
+    {
+        float i = Random.Range(-1f, 1f);
+        if (i == 0)
+        {
+            i = 0.5f;
+        }
+        return i;
+
+    }
+
+
     public void StartMovement()
     {
         moving = true;
-        dir = new Vector2(Random.Range(-1f,1f), 1);
-        if (dir.x == 0)
-        {
-            dir.x = 0.5f;
-        }
+        dir.y = 1;
+        dir.x = GiveRandom();
+
 
     }
 
     public void Reset(GameObject Player)
     {
-       transform.position = new Vector3(0, -2, 1);
+        transform.position = ResetPos;
         dir = Vector3.zero;
         moving = false;
         player = Player;
@@ -159,8 +193,13 @@ public class Ball : IUpdateable
     {
         if (player != null)
         {
-            transform.position = new Vector3(player.transform.position.x,player.transform.position.y +0.3f, player.transform.position.z);
-
+            transform.position = player.transform.position;
+            transform.position += Yoffset;
         }
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = new Color(255, 0, 0);
+        Gizmos.DrawSphere(transform.position, radius);
     }
 }
