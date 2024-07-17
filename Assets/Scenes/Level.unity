@@ -3040,16 +3040,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
+      - m_Target: {fileID: 1800038320}
+        m_TargetAssemblyTypeName: Main_Menu, Assembly-CSharp
+        m_MethodName: Level_Start
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1033254078
@@ -5750,6 +5750,7 @@ GameObject:
   - component: {fileID: 1800038319}
   - component: {fileID: 1800038318}
   - component: {fileID: 1800038317}
+  - component: {fileID: 1800038320}
   m_Layer: 5
   m_Name: Canvas_Dynamic
   m_TagString: Untagged
@@ -5840,6 +5841,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1800038320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800038315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a4c86d21afe2b47b9c4f9c5a03d261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryButton: {fileID: 1033254077}
 --- !u!1 &1813044605 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7004008268828138783, guid: 3f1192dca37375644861957932d7b7b5, type: 3}
